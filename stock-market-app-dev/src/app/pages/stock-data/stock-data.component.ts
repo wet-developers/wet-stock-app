@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClientService, Product} from '../../services/http-client.service';
 
 @Component({
   selector: 'app-stock-data',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StockDataComponent implements OnInit {
 
-  constructor() { }
+  products: Product[] = [];
+
+  constructor(private httpClientService: HttpClientService) { }
 
   ngOnInit(): void {
+    this.httpClientService.getProducts().subscribe(
+      response => this.handleSuccessfulResponse(response),
+    );
   }
+  
+  handleSuccessfulResponse(response: Product[]) {
+    this.products = response;
+}
 
 }

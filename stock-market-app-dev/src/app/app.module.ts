@@ -7,7 +7,8 @@ import { StockDataComponent } from './pages/stock-data/stock-data.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { HeaderComponent } from './pages/header/header.component';
 import { SubscribeComponent } from './pages/subscribe/subscribe.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientService } from './services/http-client.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,9 +19,10 @@ import { SubscribeComponent } from './pages/subscribe/subscribe.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpClientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
