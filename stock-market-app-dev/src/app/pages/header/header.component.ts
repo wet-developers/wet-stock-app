@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  navigate: boolean = true;
+
+  constructor(private routing: Router) { }
 
   ngOnInit(): void {
+  }
+
+  goStockDataPage() {
+    if (this.navigate === true) {
+    this.routing.navigate(['/stock-data']);
+    } else {
+      console.log('Do not navigate');
+    }
   }
 
 }
