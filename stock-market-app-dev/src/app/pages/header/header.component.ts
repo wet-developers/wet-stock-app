@@ -7,19 +7,13 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  navigate: boolean = true;
-
   constructor(private routing: Router) { }
 
   ngOnInit(): void {
   }
 
   goStockDataPage() {
-    if (this.navigate === true) {
     this.routing.navigate(['/stock-data']);
-    } else {
-      console.log('Do not navigate');
-    }
   }
 
 }

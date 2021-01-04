@@ -3,10 +3,10 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 60px;
+    height: 40px;
     display: flex;
     align-items: center;
-    background-color: #1976d2;
+    background-color: #d21919;
     color: white;
     font-weight: 600;
   }
@@ -30,4 +30,17 @@
 
   .stock-data-spacer {
     margin-left: 10px;
+  }
+  
+  .navbar {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    right: 0;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    background-color: #835656;
+    color: white;
+    font-weight: 600;
   }

@@ -9,13 +9,19 @@ import { HeaderComponent } from './pages/header/header.component';
 import { SubscribeComponent } from './pages/subscribe/subscribe.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientService } from './services/http-client.service';
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { HomeComponent } from './pages/home/home.component';
+import { CartComponent } from './pages/cart/cart.component';
 @NgModule({
   declarations: [
     AppComponent,
     StockDataComponent,
     FooterComponent,
     HeaderComponent,
-    SubscribeComponent
+    SubscribeComponent,
+    ContactPageComponent,
+    HomeComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
