@@ -12,6 +12,10 @@ import { HttpClientService } from './services/http-client.service';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CartComponent } from './pages/cart/cart.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatTabsModule} from '@angular/material/tabs'; 
+import {MatIconModule} from '@angular/material/icon';  
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +30,11 @@ import { CartComponent } from './pages/cart/cart.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatTabsModule,
+    MatIconModule
   ],
   providers: [HttpClientService],
   bootstrap: [AppComponent]

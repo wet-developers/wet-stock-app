@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'contact-page', component: ContactPageComponent },
   { path: 'collections', component: StockDataComponent },
   { path: 'cart', component: CartComponent },
-  { path: 'subscribe', component: SubscribeComponent},
+  { path: 'subscribe', component: SubscribeComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: '**', redirectTo: '/home', pathMatch: 'full'}
 ];

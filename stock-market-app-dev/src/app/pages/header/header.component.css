@@ -1,4 +1,4 @@
-.toolbar {
+  .toolbar {
     position: absolute;
     top: 0;
     left: 0;
@@ -9,7 +9,7 @@
     background-color: #d21919;
     color: white;
     font-weight: 600;
-  }
+  } 
 
   .toolbar img {
     margin: 0 16px;
@@ -34,13 +34,22 @@
   
   .navbar {
     position: absolute;
-    top: 45px;
+    top: 200px;
     left: 0;
     right: 0;
-    height: 140px;
+    height: 200px;
     display: flex;
     align-items: center;
     background-color: #835656;
     color: white;
     font-weight: 600;
+  }
+
+  .container {
+    display: flex;
+    width: 100%;
+  }
+
+  div.container>div {
+      flex-grow: 1.5;
   }
