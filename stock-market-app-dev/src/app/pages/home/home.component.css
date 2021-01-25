@@ -1,0 +1,71 @@
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background-color: #d21919;
+    font-weight: 400;
+  } 
+
+  .toolbar img {
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo {
+    height: 40px;
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo:hover {
+    opacity: 0.8;
+  }
+
+  .collections-headline {
+    flex: 0.7;
+    color: white;
+  }
+
+  .navbar {
+    position: absolute;
+    padding-top: 0;
+    left: -20px;
+    right: -20px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    margin-top: 38px;
+  }
+  .teamNoLackin-tag {
+    flex: 0.7;
+    flex-direction: row;
+  }
+
+  .home-tag {
+    flex: 0.7;
+    flex-direction: row;
+    margin-left: 70px;
+  }
+  .collections-tag {
+    flex: 0.7;
+    flex-direction: row;
+    margin-right: 100px;  
+  }
+  .contact-tag {
+    flex: 0.7;
+    flex-direction: row;
+    margin-right: 100px;
+  }
+  .search-tag {
+    flex: 0.7;
+    flex-direction: row;
+    margin-right: 100px;
+  }
+  .cart-tag {
+    flex: 0.7;
+    flex-direction: row;
+    margin-right: 100px;
+  }

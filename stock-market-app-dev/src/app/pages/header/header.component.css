@@ -7,8 +7,7 @@
     display: flex;
     align-items: center;
     background-color: #d21919;
-    color: white;
-    font-weight: 600;
+    font-weight: 400;
   } 
 
   .toolbar img {
@@ -24,32 +23,12 @@
     opacity: 0.8;
   }
 
-  .spacer {
-    flex: 1;
-  }
-
-  .stock-data-spacer {
-    margin-left: 10px;
-  }
-  
-  .navbar {
-    position: absolute;
-    top: 200px;
-    left: 0;
-    right: 0;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    background-color: #835656;
+  .collections-headline {
+    flex: 0.5;
+    flex-direction: row;
     color: white;
-    font-weight: 600;
+    font-size: 80%;
   }
-
-  .container {
-    display: flex;
-    width: 100%;
-  }
-
-  div.container>div {
-      flex-grow: 1.5;
+  .vertical-spacer {
+    flex: 0.4;
   }

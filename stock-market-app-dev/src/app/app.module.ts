@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StockDataComponent } from './pages/stock-data/stock-data.component';
@@ -15,7 +14,12 @@ import { CartComponent } from './pages/cart/cart.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTabsModule} from '@angular/material/tabs'; 
-import {MatIconModule} from '@angular/material/icon';  
+import {MatIconModule} from '@angular/material/icon';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ProductsComponent } from './pages/products/products.component';
+import { SearchModalComponent } from './pages/search-modal/search-modal.component';
+import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +29,9 @@ import {MatIconModule} from '@angular/material/icon';
     SubscribeComponent,
     ContactPageComponent,
     HomeComponent,
-    CartComponent
+    CartComponent,
+    ProductsComponent,
+    SearchModalComponent
   ],
   imports: [
     BrowserModule,
@@ -34,9 +40,14 @@ import {MatIconModule} from '@angular/material/icon';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatTabsModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [HttpClientService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [SearchModalComponent]
 })
 export class AppModule { }

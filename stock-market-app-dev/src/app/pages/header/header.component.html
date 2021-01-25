@@ -1,13 +1,16 @@
-<nav mat-tab-nav-bar [backgroundColor]="background">
-  <a mat-tab-link *ngFor="let link of links"
-     (click)="activeLink = link" 
-     [active]="activeLink == link"> {{link}}
-  </a>
-  <a mat-tab-link>
-    <mat-icon aria-hidden="false" aria-label="Example search icon">search</mat-icon>
-  </a>
-  <a mat-tab-link>
-    <mat-icon aria-hidden="false" aria-label="Example add_shopping_cart icon">add_shopping_cart</mat-icon>
-  </a>
-</nav>
+<mat-toolbar class="toolbar">
+  <div class="container">
+    <div class="row">
+      <div class="col-4 left">
+        <a href="home">
+          <mat-icon class="collections-headline" aria-hidden="false">arrow_back</mat-icon>
+        </a>
+      </div>
+      <div class="col-8 right">
+        <span class="vertical-spacer"></span>
+        <a class="collections-headline" href="collections">ALL SHIRTS ARE OVERSIZED!!!</a>      </div>
+    </div>
+  </div>
+</mat-toolbar>
+
 
