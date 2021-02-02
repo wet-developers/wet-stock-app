@@ -69,3 +69,11 @@
     flex-direction: row;
     margin-right: 100px;
   }
+
+  .carouselDiv {
+    margin-left: 100px;
+    margin-top: 700px;
+    height: 186.25px;
+    position: relative;
+    flex: 1;
+  }

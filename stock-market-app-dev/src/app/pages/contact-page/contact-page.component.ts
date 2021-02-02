@@ -1,15 +1,41 @@
-import { Component, OnInit } from '@angular/core';
+import { ElementRef } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-page',
   templateUrl: './contact-page.component.html',
   styleUrls: ['./contact-page.component.css']
 })
-export class ContactPageComponent implements OnInit {
+export class ContactPageComponent implements AfterViewInit, OnInit {
 
-  constructor() { }
+  form: FormGroup;
+  constructor(private elementRef: ElementRef) {
+    this.form = new FormGroup (
+      {}
+    )
+   }
 
-  ngOnInit(): void {
+  ngAfterViewInit() {
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = 'black';
+
   }
+  
+  ngOnInit() {
+    this.form = new FormGroup (
+      {
+        name: new FormControl(''),
+        email: new FormControl(''),
+        number: new FormControl(''),
+        message: new FormControl('')
+      }
+    );
+  }
+
+  Send() {
+    console.log(this.form.value);
+  }
+
 
 }

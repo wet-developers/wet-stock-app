@@ -33,7 +33,7 @@ export class SearchModalComponent implements OnInit {
       {
         description: new FormControl('')
       }
-    )
+    );
     this.http.getJSONData().subscribe(res => {
       this.products = res.products;
     });

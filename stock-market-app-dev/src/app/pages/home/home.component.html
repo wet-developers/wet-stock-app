@@ -19,9 +19,57 @@
       </section>
     </nav>
   </div> 
-  <div class="row">
-    
+  <div class="row" style="margin-top: 120px; margin-right: 300px; flex: 1; background-color: black; position: absolute">
+    <h2>Featured Collection</h2>
+    <div class="row" style="margin-left: 20px">
+      <ng-container *ngFor="let featuredCollection of featuredCollectionsRow1">
+        <a href="collections">
+          <div style="margin-right: 25px">
+              <img src="{{ featuredCollection.image }}" height="220" width="280">
+          </div>
+          <div style="height: 30px; font-size: medium">
+              <h2 [innerHTML]="featuredCollection.caption"></h2>
+          </div>  
+        </a>
+      </ng-container>
+    </div>
+    <div class="row" style="margin-left: 195px">
+      <ng-container *ngFor="let featuredCollection of featuredCollectionsRow2">
+        <a href="collections">
+          <div style="margin-right: 25px">
+              <img src="{{ featuredCollection.image }}" height="220" width="280">
+          </div>
+          <div style="height: 30px; font-size: medium">
+              <h2 [innerHTML]="featuredCollection.caption"></h2>
+          </div>  
+        </a>
+      </ng-container>
+    </div>
   </div> 
+  <div class="carouselDiv">
+    <owl-carousel-o [options]="customOptions">
+      <ng-template carouselSlide>
+          <div class="slide">
+              <img src="assets/AEOGII Shirt.png">
+          </div>
+      </ng-template>
+      <ng-template carouselSlide>
+          <div class="slide">
+              <img src="assets/TNL Clock.png">
+          </div>
+      </ng-template>
+      <ng-template carouselSlide>
+          <div class="slide">
+              <img src="assets/Akatsuki Ski Mask.png">
+          </div>
+      </ng-template>
+      <ng-template carouselSlide>
+          <div class="slide">
+              <img src="assets/Void TNL Shirt.png">
+          </div>
+      </ng-template>
+    </owl-carousel-o>
+  </div>
 </div>
 
 

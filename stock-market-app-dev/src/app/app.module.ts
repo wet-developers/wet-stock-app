@@ -20,6 +20,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { ProductsComponent } from './pages/products/products.component';
 import { SearchModalComponent } from './pages/search-modal/search-modal.component';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,8 @@ import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
     MatDialogModule,
     MatFormFieldModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CarouselModule
   ],
   providers: [HttpClientService],
   bootstrap: [AppComponent],
