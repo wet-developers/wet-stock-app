@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
      }
     },
    nav: true
-  }
+  };
   img: any;
   featuredCollectionsRow1: any;
   featuredCollectionsRow2: any;

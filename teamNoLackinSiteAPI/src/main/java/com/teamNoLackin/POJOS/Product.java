@@ -9,41 +9,17 @@ import lombok.Value;
 public class Product {
 	@Id
     private String productId;
-    
-	private String name;
-    private String code;
-    private String title;
+
     private String description;
+    private String imgUrl;
+    private Double price;
+    
     public String getProductId() {
 		return productId;
 	}
 
 	public void setProductId(String productId) {
 		this.productId = productId;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getCode() {
-		return code;
-	}
-
-	public void setCode(String code) {
-		this.code = code;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
 	}
 
 	public String getDescription() {
@@ -69,9 +45,6 @@ public class Product {
 	public void setPrice(Double price) {
 		this.price = price;
 	}
-
-	private String imgUrl;
-    private Double price;
 
     public Product(){
     }

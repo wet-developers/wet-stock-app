@@ -1,3 +1,5 @@
+import { AfterViewInit } from '@angular/core';
+import { ElementRef } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -5,11 +7,15 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
-export class CartComponent implements OnInit {
+export class CartComponent implements AfterViewInit, OnInit {
 
-  constructor() { }
+  constructor(private elementRef: ElementRef) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+  }
+
+  ngAfterViewInit() {
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = 'black';
   }
 
 }

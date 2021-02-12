@@ -19,7 +19,6 @@ export class ContactPageComponent implements AfterViewInit, OnInit {
 
   ngAfterViewInit() {
     this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = 'black';
-
   }
   
   ngOnInit() {
@@ -33,8 +32,9 @@ export class ContactPageComponent implements AfterViewInit, OnInit {
     );
   }
 
-  Send() {
+  contactFormRequest() {
     console.log(this.form.value);
+
   }
 
 

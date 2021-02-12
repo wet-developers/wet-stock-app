@@ -6,8 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -15,28 +18,39 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.teamNoLackin.POJOS.Product;
 import com.teamNoLackin.repositories.ProductRegistry;
+import com.teamNoLackin.services.*;
+import com.teamNoLackin.services.impl.*;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 @RestController
+@RequestMapping({"/api"})
 public class stockDataController {
 	
 	@Autowired
-	private  ProductRegistry productRepository;
+	private ProductService productService;
 	
-	@SuppressWarnings("unchecked")
-	@RequestMapping(value="/products", method = RequestMethod.GET)
-	public ResponseEntity<Product> getAllProducts() {
-		return (ResponseEntity<Product>) productRepository.findAll();
+	@PostMapping
+	public Product create(@RequestBody Product product) {
+		return productService.create(product);
 	}
 	
-	@GetMapping("/hello")
-	public ResponseEntity<String> hello() {
-	    return new ResponseEntity<>("Hello World!", HttpStatus.OK);
+	@GetMapping(path = {"/{id}"})
+	public Product findOne(@PathVariable("id") int id) {
+	    return productService.findById(id);
 	}
 	
-
-	@RequestMapping(value="/users", method = RequestMethod.POST)
-    void addUser(@RequestBody Product product) {
-		productRepository.save(product);
-    }
+	@PutMapping
+	public Product update(@RequestBody Product product) {
+		return productService.update(product);
+	}
+	
+	@DeleteMapping(path = {"/{id}"})
+	public Product delete(@PathVariable("id") int id) {
+		return productService.delete(id);
+	}
+	
+	@GetMapping
+	public List findAll() {
+		return productService.findAll();
+	}
 }

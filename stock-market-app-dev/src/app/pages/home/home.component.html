@@ -1,75 +1,8 @@
 <div class="container">
-  <div class="row">  
-    <nav mat-tab-nav-bar class="navbar" [backgroundColor]="background"> 
-      <section class="col-2 left">
-        <a mat-tab-link class="teamNoLackin-tag" href="home">
-          <img [src]="img" height="40px" width="150px">
-        </a>
-      </section>
-      <section class="col-10 right">
-        <a mat-tab-link class="home-tag" href="home">Home</a>
-        <a mat-tab-link class="collections-tag" href="collections">Team Store</a>
-        <a mat-tab-link class="contact-tag" href="contact-page">Contact</a>
-        <a mat-tab-link (click)="openSearchModal()" class="search-tag" mdbWavesEffect> 
-          <mat-icon aria-hidden="false">search</mat-icon>
-        </a>
-        <a mat-tab-link class="cart-tag" href="cart">
-          <mat-icon aria-hidden="false">add_shopping_cart</mat-icon>    
-        </a>
-      </section>
-    </nav>
-  </div> 
-  <div class="row" style="margin-top: 120px; margin-right: 300px; flex: 1; background-color: black; position: absolute">
-    <h2>Featured Collection</h2>
-    <div class="row" style="margin-left: 20px">
-      <ng-container *ngFor="let featuredCollection of featuredCollectionsRow1">
-        <a href="collections">
-          <div style="margin-right: 25px">
-              <img src="{{ featuredCollection.image }}" height="220" width="280">
-          </div>
-          <div style="height: 30px; font-size: medium">
-              <h2 [innerHTML]="featuredCollection.caption"></h2>
-          </div>  
-        </a>
-      </ng-container>
-    </div>
-    <div class="row" style="margin-left: 195px">
-      <ng-container *ngFor="let featuredCollection of featuredCollectionsRow2">
-        <a href="collections">
-          <div style="margin-right: 25px">
-              <img src="{{ featuredCollection.image }}" height="220" width="280">
-          </div>
-          <div style="height: 30px; font-size: medium">
-              <h2 [innerHTML]="featuredCollection.caption"></h2>
-          </div>  
-        </a>
-      </ng-container>
-    </div>
-  </div> 
-  <div class="carouselDiv">
-    <owl-carousel-o [options]="customOptions">
-      <ng-template carouselSlide>
-          <div class="slide">
-              <img src="assets/AEOGII Shirt.png">
-          </div>
-      </ng-template>
-      <ng-template carouselSlide>
-          <div class="slide">
-              <img src="assets/TNL Clock.png">
-          </div>
-      </ng-template>
-      <ng-template carouselSlide>
-          <div class="slide">
-              <img src="assets/Akatsuki Ski Mask.png">
-          </div>
-      </ng-template>
-      <ng-template carouselSlide>
-          <div class="slide">
-              <img src="assets/Void TNL Shirt.png">
-          </div>
-      </ng-template>
-    </owl-carousel-o>
-  </div>
+  <app-navbar></app-navbar>
+  <app-featured-collection></app-featured-collection>
+  <app-carousel></app-carousel>
 </div>
+
 
 

@@ -16,6 +16,6 @@
     margin-bottom: 10px;
     
 }
-.send-button {
+.send-button:hover {
     background-color: gray;
 }

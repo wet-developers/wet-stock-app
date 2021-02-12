@@ -1,21 +1,13 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
+import { Product } from '../models/product.model';
 
-export class Product {
-  constructor(
-    public  productId: string,
-    public  name: string,
-    public  code: string,
-    public  title: string,
-    public  description: string,
-    public  imgUrl: string,
-    public  price: string,
-  ) {
-  }
-}
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json'})
+};
 
 @Injectable({
   providedIn: 'root'
@@ -24,11 +16,20 @@ export class HttpClientService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getProducts() {
+  private productURL = 'http://localhost:8080/teamNoLackin-portal/users';
+
+  public getProducts() {
     console.log('Test Call..');
-    return this.httpClient.get<Product[]>('http://localhost:8080/products');
+    return this.httpClient.get<Product[]>(this.productURL);
   }
 
+  public deleteUser(product: any) {
+    return this.httpClient.delete(this.productURL + "/" + product.id);
+  }
+
+  public createUser(product: any) {
+    return this.httpClient.post<Product>(this.productURL, product);
+  }
   // getProductJSONData(value: Object[]) {
   //   console.log(this.httpClient.get('assets/contents/products.json'));
   //   console.log(value);

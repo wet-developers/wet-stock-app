@@ -21,6 +21,10 @@ import { ProductsComponent } from './pages/products/products.component';
 import { SearchModalComponent } from './pages/search-modal/search-modal.component';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { NavbarComponent } from './pages/navbar/navbar.component';
+import { FeaturedCollectionComponent } from './pages/featured-collection/featured-collection.component';
+import { CarouselComponent } from './pages/carousel/carousel.component';
+import { ChallengeComponent } from './pages/challenge/challenge.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +36,11 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     HomeComponent,
     CartComponent,
     ProductsComponent,
-    SearchModalComponent
+    SearchModalComponent,
+    NavbarComponent,
+    FeaturedCollectionComponent,
+    CarouselComponent,
+    ChallengeComponent
   ],
   imports: [
     BrowserModule,
