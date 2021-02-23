@@ -13,19 +13,19 @@ import {HttpClientService} from '../../services/http-client.service';
 export class StockDataComponent implements AfterViewInit, OnInit {
 
   Products: Product[] = []; 
-  JSONProducts: any;
+  products: any;
 
   constructor(private httpClientService: HttpClientService,
     private elementRef: ElementRef, private router: Router) { }
 
   ngOnInit() {
-    this.httpClientService.getProducts().subscribe(data => {
-      this.Products = data;
-    })
+    // this.httpClientService.getProducts().subscribe(data => {
+    //   this.Products = data;
+    // })
     
-  // this.httpClientService.getJSONData().subscribe(res => {
-  //     this.JSONProducts = res.JSONProducts;
-  //   });  
+    this.httpClientService.getJSONData().subscribe(res => {
+      this.products = res.products;
+    });  
   }
 
   ngAfterViewInit() {

@@ -2,20 +2,19 @@
   <div class="row" style="margin-left: 440px">
     <h2 style="color: white">Products</h2>
   </div>
-  <div class="row">
-    <ng-container *ngFor="let product of Products">
+  <div class="row" style="margin-left: 60px; margin-right: 60px; margin-top: 20px">
+    <ng-container *ngFor="let product of products">
       <a href="products">
-        <div class="row">
-          <div>
-            <img src="{{ product.imgUrl }}" height="220" width="280">
-          </div>
-          <div style="height: 30px; font-size: medium">
-            <h2 style="color: white" [innerHTML]="product.description"></h2>
-          </div>
+        <div style="padding-right: 10px">
+          <img src="{{ product.image }}" height="220" width="280">
+        </div>
+        <div style="height: 30px; font-size: small">
+          <h2 style="color: white" [innerHTML]="product.caption"></h2>
         </div>
       </a>
     </ng-container>
   </div>
 </div>
+
 
   

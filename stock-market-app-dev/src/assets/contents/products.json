@@ -84,5 +84,36 @@
             "caption": "Death B4 Dishonor Hoodie - $90",
             "description": "Death B4 Dishonor Hoodie"
         }
+    ],
+    "individualProducts": [
+        {
+            "imageCount": 3,
+            "image": "assets/My_Brothers_Keeper_Shirt_Both_Sides.png",
+            "title": "My Brothers Keeper Shirt",
+            "description": "My Brothers Keeper Both Sides"
+        },
+        {
+            "imageCount": 3,
+            "image": "assets/My_Brothers_Keeper_Shirt_Back_Side.png",
+            "description": "My Brothers Keeper Back Side"
+        },
+        {
+            "imageCount": 3,
+            "image": "assets/My_Brothers_Keeper_Shirt_Front.png",
+            "description": "My Brothers Keeper Front Side"
+        },
+        {
+            "imageCount": 2,
+            "image": "assets/TNL Big Maylor Bags.png",
+            "caption": "TNL Big Maylor Bags  - $1",
+            "description": "TNL Big Maylor Bags"
+        },
+        {
+            "imageCount": 2,
+            "image": "assets/Death B4 Dishonor Hoodie.png",
+            "caption": "Death B4 Dishonor Hoodie - $90",
+            "description": "Death B4 Dishonor Hoodie"
+        }
     ]
+    
 }

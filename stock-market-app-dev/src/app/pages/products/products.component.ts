@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
-export class ProductsComponent implements OnInit {
+export class ProductsComponent implements AfterViewInit, OnInit {
 
-  constructor() { }
+  individualProducts: any;
 
-  ngOnInit(): void {
+  constructor(private elementRef: ElementRef) { }
+
+  ngOnInit() {
+
+  }
+
+  ngAfterViewInit() {
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = 'black';
   }
 
 }
