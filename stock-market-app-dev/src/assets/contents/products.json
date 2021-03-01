@@ -87,32 +87,41 @@
     ],
     "individualProducts": [
         {
-            "imageCount": 3,
             "image": "assets/My_Brothers_Keeper_Shirt_Both_Sides.png",
             "title": "My Brothers Keeper Shirt",
-            "description": "My Brothers Keeper Both Sides"
+            "description": "My Brothers Keeper Shirt"
         },
         {
-            "imageCount": 3,
             "image": "assets/My_Brothers_Keeper_Shirt_Back_Side.png",
-            "description": "My Brothers Keeper Back Side"
+            "description": "My Brothers Keeper Shirt"
         },
         {
-            "imageCount": 3,
             "image": "assets/My_Brothers_Keeper_Shirt_Front.png",
-            "description": "My Brothers Keeper Front Side"
+            "description": "My Brothers Keeper Shirt"
         },
         {
-            "imageCount": 2,
             "image": "assets/TNL Big Maylor Bags.png",
-            "caption": "TNL Big Maylor Bags  - $1",
+            "title": "TNL Big Maylor Bags",
             "description": "TNL Big Maylor Bags"
         },
         {
-            "imageCount": 2,
             "image": "assets/Death B4 Dishonor Hoodie.png",
-            "caption": "Death B4 Dishonor Hoodie - $90",
+            "title": "Death B4 Dishonor Hoodie",
             "description": "Death B4 Dishonor Hoodie"
+        },
+        {
+            "image": "assets/Akatsuki Ski Mask.png",
+            "title": "Akatsuki Ski Mask",
+            "description": "Akatsuki Ski Mask"
+        },
+        {
+            "image": "assets/AEOGII_blue_products.png",
+            "title": "AEOGII Shirt",
+            "description": "AEOGII blue Shirt"
+        },
+        {
+            "image": "assets/AEOGII_pink_product.png",
+            "description": "AEOGII Shirt"
         }
     ]
     

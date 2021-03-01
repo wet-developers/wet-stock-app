@@ -5,7 +5,7 @@
     </div>
     <div class="row" style="margin-left: 60px; margin-right: 60px; margin-top: 20px">
       <ng-container *ngFor="let featuredCollection of featuredCollectionsRow1">
-        <a href="collections">
+        <a (click)="searchForProductRow1($event)">
           <div style="margin-right: 25px">
               <img src="{{ featuredCollection.image }}" height="220" width="280">
           </div>
@@ -17,7 +17,7 @@
     </div>
     <div class="row" style="margin-left: 60px; margin-right: 60px; margin-top: 10px; margin-bottom: 10px">
       <ng-container *ngFor="let featuredCollection of featuredCollectionsRow2">
-        <a href="collections">
+        <a (click)="searchForProductRow2($event)">
           <div style="margin-right: 25px">
            <img src="{{ featuredCollection.image }}" height="220" width="280">
           </div>
